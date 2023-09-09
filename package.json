@@ -1,0 +1,15 @@
+{
+  "name": "Booking-site",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Maliosman26/Booking-site.git",
+  "author": "Maliosman26 <muhammetaliosmanozyurt@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
