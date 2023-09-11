@@ -1,19 +1,9 @@
 @import 'normalize.scss';
+//
 @import 'variable.scss';
 @import 'formalize.scss';
 @import 'global.scss';
+//
+@import 'header.scss'; 
 
 
-$color1: rgb(186, 53, 186);
-
-body {
-    color: $color1;
-}
-
-a {
-    color: white;
-
-    &:hover {
-        color: red;
-    }
-}     
