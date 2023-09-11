@@ -4,12 +4,65 @@
   .container {
     display: flex;
     align-items: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    height: 64px;
   }
 
   &-menu {
     margin-left: auto;
     display: flex;
+
+    &-user {
+      display: flex;
+      a {
+        display: inline-flex;
+        align-items: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        height: $finger-size;
+        background-color: #eee;
+        &:hover {
+          background-color: #bfb;
+        }
+      }
+    }
+
+    &-switch {
+        background: none;
+        border: none;
+    }
+
+    &-helper {
+      display: flex;
+      margin-left: 20px;
+
+      select {
+        appearance: none; //Form elemanının görünümünü sıfırlar
+        background-color: transparent;
+        border: 1px solid #e0e6f1;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 0;
+        color: $color-navy;
+        height: $finger-size;
+
+        &:nth-child(1) {
+          // Select 1
+          border-bottom-left-radius: $border-radius;
+          border-top-left-radius: $border-radius;
+        }
+        &:nth-child(2) {
+          // Select 2
+          border-left: 0; //ortadaki 2 borderın birleşmesini ayırma
+          border-bottom-right-radius: $border-radius;
+          border-top-right-radius: $border-radius;
+        }
+      }
+    }
+  }
+
+  &-logo {
+    img {
+      width: 144px;
+    }
   }
 }
