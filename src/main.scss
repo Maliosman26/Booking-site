@@ -1,9 +1,10 @@
-@import 'normalize.scss';
+@import 'scss/config/variable.scss';
+@import 'scss/config/mixin.scss';
 //
-@import 'variable.scss';
-@import 'formalize.scss';
-@import 'global.scss';
+@import 'scss/helper/normalize.scss';
+@import 'scss/helper/formalize.scss';
+@import 'scss/helper/global.scss';
 //
-@import 'header.scss'; 
+@import 'scss/global/header.scss'; 
 
 

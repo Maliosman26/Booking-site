@@ -1,3 +1,5 @@
+//Header Layout İşlemleri
+
 .Header {
   border-bottom: 1px solid #ddd;
 
@@ -5,6 +7,24 @@
     display: flex;
     align-items: center;
     height: 64px;
+  }
+
+  &-logo {
+    img {
+      width: 144px;
+    }
+  }
+
+  &-switch {
+    background: none;
+    border: none;
+
+    @include mq {
+      display: none;
+    }
+    @include mq("desktop") {
+      display: block;
+    }
   }
 
   &-menu {
@@ -24,11 +44,6 @@
           background-color: #bfb;
         }
       }
-    }
-
-    &-switch {
-        background: none;
-        border: none;
     }
 
     &-helper {
@@ -57,12 +72,6 @@
           border-top-right-radius: $border-radius;
         }
       }
-    }
-  }
-
-  &-logo {
-    img {
-      width: 144px;
     }
   }
 }
