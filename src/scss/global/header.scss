@@ -29,7 +29,6 @@
     pointer-events: none;
     opacity: 0;
     transform: translateX(100%);
-    transition: .4s;
     display: flex;
     position: absolute;
     left: 0;
@@ -45,19 +44,30 @@
     .Header.menu-show & {
      opacity: 1;
      transform: translateY(0);
-     pointer-events: auto;
     }
-    
-    @include mq ("tablet") {
-      display: flex;
+
+    @include mq("tablet") {
+      opacity: 1;
+      transform: translateY(0);
+      transition: 0s;
       margin-left: auto;
+      flex-direction: row;
+      position: static;
+      box-shadow: none;
+      background: transparent;
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 0;
     }
 
     &-user {
       display: flex;
       flex-direction: column; //Alt alta gelmesini sağlar
       align-items: center; //Öğeleri dikey olarak ortala
-      
+      @include mq("tablet") {
+        flex-direction: row;
+      }
+
       a {
         width: 100%;
         display: inline-flex;
@@ -65,8 +75,7 @@
         justify-content: center; //Öğeleri yatay olarak ortala
         padding-left: 20px;
         padding-right: 20px;
-        height: $finger-size;
-        background-color: #eee;
+        height: $finger-size; 
         &:hover {
           background-color: #bfb;
         }
@@ -76,6 +85,9 @@
     &-property {
       margin-top: 20px;
       justify-content: center; //Yatayda ortala
+      @include mq("tablet") {
+        margin-top: 0;
+      }
     }
 
     &-helper {
@@ -85,6 +97,7 @@
 
       @include mq("tablet") {
         margin-left: 20px;
+        margin-top: 0;
       }
 
       select {
