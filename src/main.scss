@@ -1,10 +1,11 @@
-@import 'scss/config/variable.scss';
-@import 'scss/config/mixin.scss';
+@import "scss/config/variable.scss";
+@import "scss/config/mixin.scss";
 //
-@import 'scss/helper/normalize.scss';
-@import 'scss/helper/formalize.scss';
-@import 'scss/helper/global.scss';
+@import "scss/helper/normalize.scss";
+@import "scss/helper/formalize.scss";
+@import "scss/helper/global.scss";
 //
-@import 'scss/global/header.scss'; 
-@import 'scss/global/navigation.scss';
-
+@import "scss/global/header.scss";
+@import "scss/global/navigation.scss";
+//
+@import "scss/pages/index.scss";
