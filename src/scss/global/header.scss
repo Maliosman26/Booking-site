@@ -2,12 +2,13 @@
 
 .Header {
   border-bottom: 1px solid #ddd;
+  height: 64px;
 
   .container {
     position: relative;
     display: flex;
     align-items: center;
-    height: 64px;
+    height: 100%;
   }
 
   &-logo {
@@ -28,27 +29,28 @@
   &-menu {
     pointer-events: none;
     opacity: 0;
-    transform: translateX(100%);
+    //transform: translateX(100%);
     display: flex;
     position: absolute;
     left: 0;
-    right: 0 ;
+    right: 0;
     top: 100%;
     padding-left: $gutter;
     padding-right: $gutter;
-    padding-bottom: 10px; 
+    padding-bottom: 10px;
     flex-direction: column; //Dikey olarak alt alta gelmesini sağlar
     background-color: #eee;
-    box-shadow: 0 20px 30px rgba(black, .2);
+    box-shadow: 0 20px 30px rgba(black, 0.2);
 
     .Header.menu-show & {
-     opacity: 1;
-     transform: translateY(0);
+      pointer-events: auto;
+      opacity: 1;
+      //transform: translateY(0);
     }
 
     @include mq("tablet") {
       opacity: 1;
-      transform: translateY(0);
+      //transform: translateY(0);
       transition: 0s;
       margin-left: auto;
       flex-direction: row;
@@ -75,7 +77,7 @@
         justify-content: center; //Öğeleri yatay olarak ortala
         padding-left: 20px;
         padding-right: 20px;
-        height: $finger-size; 
+        height: $finger-size;
         &:hover {
           background-color: #bfb;
         }
