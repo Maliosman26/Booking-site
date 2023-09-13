@@ -1,8 +1,7 @@
 //Header Layout İşlemleri
-
+$Header-height: 68px;
 .Header {
-  border-bottom: 1px solid #ddd;
-  height: 64px;
+  height: $Header-height;
 
   .container {
     position: relative;
@@ -31,10 +30,10 @@
     opacity: 0;
     //transform: translateX(100%);
     display: flex;
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
-    top: 100%;
+    top: $Header-height;
     padding-left: $gutter;
     padding-right: $gutter;
     padding-bottom: 10px;
@@ -49,6 +48,7 @@
     }
 
     @include mq("tablet") {
+      pointer-events: auto;
       opacity: 1;
       //transform: translateY(0);
       transition: 0s;
