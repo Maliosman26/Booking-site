@@ -42,6 +42,7 @@
 }
 
 .Search {
+  text-align: left;
   margin-top: 30px;
   background-color: $color-yellow;
   padding: $gutter;
@@ -51,6 +52,8 @@
   @include mq("tablet"){
       padding: 50px 30px;
       margin-top: 50px;
+      margin-left: 100px;
+      margin-right: 100px;
   }
 
   &-form {
@@ -66,7 +69,6 @@
     &-item {
       width: 100%;
       @include mq("tablet"){
-        width: auto;
       }
       & + & {
         margin-top: 20px;
