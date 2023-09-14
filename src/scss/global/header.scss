@@ -28,7 +28,6 @@ $Header-height: 68px;
   &-menu {
     pointer-events: none;
     opacity: 0;
-    //transform: translateX(100%);
     display: flex;
     position: fixed;
     left: 0;
@@ -44,13 +43,11 @@ $Header-height: 68px;
     .Header.menu-show & {
       pointer-events: auto;
       opacity: 1;
-      //transform: translateY(0);
     }
 
     @include mq("tablet") {
       pointer-events: auto;
       opacity: 1;
-      //transform: translateY(0);
       transition: 0s;
       margin-left: auto;
       flex-direction: row;

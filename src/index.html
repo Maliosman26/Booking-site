@@ -1,122 +1,170 @@
 <html>
-  <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <title>Title</title>
 
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+<head>
 
-    <link rel="stylesheet" href="main.scss" />
-  </head>
-  <body>
-    <script src="js/index.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+    rel="stylesheet" />
+  <title>Title</title>
 
-    <!-- Svg özellikleri burada tanımlanır fakat sayfada gözükmez gizli olur -->
-    <svg
-      aria-hidden="true"
-      style="position: absolute; width: 0; height: 0; overflow: hidden"
-      version="1.1"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-    >
-      <defs>
-        <symbol id="icon-menu" viewBox="0 0 32 32">
-          <path d="M2 6h28v1h-28zM2 14h28v1h-28zM2 22h28v1h-28z"></path>
-        </symbol>
-      </defs>
-    </svg>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <header class="Header">
-      <div class="container">
-        <a class="Header-logo" href="">
-          <img src="img/site-logo.png" alt="" />
-        </a>
+  <link rel="stylesheet" href="main.scss" />
+</head>
 
-        <button class="Header-switch" type="button">
-          <svg class="icon icon-menu">
-            <use xlink:href="#icon-menu"></use>
-          </svg>
-        </button>
+<body>
 
-        <div class="Header-menu">
-          <div class="Header-menu-user">
-            <a href="">Register</a>
-            <a href="">Sign In</a>
-          </div>
+  <script src="js/index.js"></script>
 
-          <a class="Header-menu-property button" href="">List your property</a>
-          <div class="Header-menu-helper">
-            <select>
-              <option value="en">En</option>
-            </select>
-            <select>
-              <option value="en">UAH</option>
-            </select>
-          </div>
+  <!-- Svg özellikleri burada tanımlanır fakat sayfada gözükmez gizli olur -->
+  <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden" version="1.1"
+    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <symbol id="icon-menu" viewBox="0 0 32 32">
+        <path d="M2 6h28v1h-28zM2 14h28v1h-28zM2 22h28v1h-28z"></path>
+      </symbol>
+      <symbol id="icon-user" viewBox="0 0 32 32">
+        <path
+          d="M18 22.082v-1.649c2.203-1.241 4-4.337 4-7.432 0-4.971 0-9-6-9s-6 4.029-6 9c0 3.096 1.797 6.191 4 7.432v1.649c-6.784 0.555-12 3.888-12 7.918h28c0-4.030-5.216-7.364-12-7.918z">
+        </path>
+      </symbol>
+      <symbol id="icon-location" viewBox="0 0 32 32">
+        <path
+          d="M16 0c-5.523 0-10 4.477-10 10 0 10 10 22 10 22s10-12 10-22c0-5.523-4.477-10-10-10zM16 16c-3.314 0-6-2.686-6-6s2.686-6 6-6 6 2.686 6 6-2.686 6-6 6z">
+        </path>
+      </symbol>
+      <symbol id="icon-calendar" viewBox="0 0 32 32">
+        <path
+          d="M10 12h4v4h-4zM16 12h4v4h-4zM22 12h4v4h-4zM4 24h4v4h-4zM10 24h4v4h-4zM16 24h4v4h-4zM10 18h4v4h-4zM16 18h4v4h-4zM22 18h4v4h-4zM4 18h4v4h-4zM26 0v2h-4v-2h-14v2h-4v-2h-4v32h30v-32h-4zM28 30h-26v-22h26v22z">
+        </path>
+      </symbol>
+      <symbol id="icon-arrow-bottom" viewBox="0 0 24 24">
+        <path d="M7.406 8.578l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z"></path>
+      </symbol>
+    </defs>
+  </svg>
+
+  <header class="Header">
+    <div class="container">
+      <a class="Header-logo" href="">
+        <img src="img/site-logo.png" alt="" />
+      </a>
+
+      <button class="Header-switch" type="button">
+        <svg class="icon icon-menu">
+          <use xlink:href="#icon-menu"></use>
+        </svg>
+      </button>
+
+      <div class="Header-menu">
+        <div class="Header-menu-user">
+          <a href="">Register</a>
+          <a href="">Sign In</a>
+        </div>
+
+        <a class="Header-menu-property button" href="">List your property</a>
+        <div class="Header-menu-helper">
+          <select>
+            <option value="en">En</option>
+          </select>
+          <select>
+            <option value="en">UAH</option>
+          </select>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <nav class="Navigation">
+  <nav class="Navigation">
+    <div class="container">
+      <a class="Navigation-item" href="">Menu1</a>
+      <a class="Navigation-item" href="">Menu2</a>
+      <a class="Navigation-item" href="">Menu3</a>
+      <a class="Navigation-item" href="">Menu4</a>
+      <a class="Navigation-item" href="">Menu5</a>
+      <a class="Navigation-item" href="">Menu6</a>
+      <a class="Navigation-item" href="">Menu7</a>
+      <a class="Navigation-item" href="">Menu8</a>
+      <a class="Navigation-item" href="">Menu9</a>
+      <a class="Navigation-item" href="">Menu10</a>
+    </div>
+  </nav>
+
+  <main class="Main">
+    <section class="Showcase">
       <div class="container">
-        <a class="Navigation-item" href="">Menu1</a>
-        <a class="Navigation-item" href="">Menu2</a>
-        <a class="Navigation-item" href="">Menu3</a>
-        <a class="Navigation-item" href="">Menu4</a>
-        <a class="Navigation-item" href="">Menu5</a>
-        <a class="Navigation-item" href="">Menu6</a>
-        <a class="Navigation-item" href="">Menu7</a>
-        <a class="Navigation-item" href="">Menu8</a>
-        <a class="Navigation-item" href="">Menu9</a>
-        <a class="Navigation-item" href="">Menu10</a>
-      </div>
-    </nav>
+        <h1>More deals than days in a year.</h1>
+        <h3>From cosy country homes to funky city flats</h3>
 
-    <main class="Main">
-      <section class="Showcase">
-        <div class="container">
-          <h1>More deals than days in a year.</h1>
-          <h3>From cosy country homes to funky city flats</h3>
+        <div class="Search">
+          <form class="Search-form" action="">
+            <div class="Search-form-item">
+              <div class="form-item">
+                <svg class="icon icon-location form-item-icon">
+                  <use xlink:href="#icon-location"></use>
+                </svg>
+                <input class="text" type="text" placeholder="Berlin- Germany" />
+              </div>
+              <p class="form-description">Destination, property name or address</p>
+            </div>
 
-          <div class="Search">
-            <form class="Search-form" action="">
-              <div>
-                <div>
-                  <input type="text" />
+            <div class="Search-form-item">
+              <div class="form-item">
+                <svg class="icon icon-calendar form-item-icon">
+                  <use xlink:href="#icon-calendar"></use>
+                </svg>
+                <input class="text" type="date" id="custom-date" placeholder="Chechk in- Check out" />
+              </div>
+              <p class="form-description">When?</p>
+            </div>
+
+            <div class="Search-form-item">
+              <div class="form-item">
+                <svg class="icon icon-user form-item-icon">
+                  <use xlink:href="#icon-user"></use>
+                </svg>
+                <div class="select">
+                  <svg class="icon icon-arrow-bottom select-icon" style="width: 40px; height: 40px;">
+                    <use xlink:href="#icon-arrow-bottom"></use>
+                  </svg>
+                  <select>
+                    <option value="">Guests</option>
+                  </select>
                 </div>
+              </div>
+            </div>
+            <div class="Search-form-item">
+              <button class="button button-navy" type="button">Let's get started</button>
+              <div class="for-work">
+                <label>
+                  <span>Are you travelling for work?</span>
+                  <input type="checkbox" class="checkbox">
+                </label>
+              </div>
+            </div>
 
-                <small>Destination, property name or address</small>
-              </div>
-              <div>
-                <div>
-                  <input type="date" />
-                </div>
-
-                <small>When</small>
-              </div>
-              <div>
-                <select>
-                  <option value="">123</option>
-                </select>
-              </div>
-              <div>
-                <button type="button">Let's get started</button>
-              </div>
-              <div class="asd">Are you travelling for work?</div>
-            </form>
-          </div>
+          </form>
         </div>
-      </section>
-    </main>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+        
+        <div class="Showcase-shortlink">
+          <a href="">Find deals</a>
+          <a href="">Travel guides</a>
+          <a href="">How was your stay?</a>
+          <a href="">Holiday rentals</a>
+          <a href="">for Business</a>
+        </div>
+
+
+      </div>
+    </section>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
 </html>

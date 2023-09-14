@@ -1,23 +1,96 @@
 .Showcase {
-  text-align: center;
   color: white;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  background-color: $color-navy;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: $color-navy url(img/showcase_back.jpg) no-repeat center center /
+    cover;
+
+  @include mq("tablet") {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+
+  &-title {
+    @include mq("tablet") {
+      font-size: 3em;
+    }
+  }
+  &-subtitle {
+    @include mq("tablet") {
+      font-size: 1.4em;
+    }
+  }
+
+  &-shortlink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 65px;
+
+    a {
+      color: inherit;
+      padding-left: 50px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    
+  }
+
+
 }
 
 .Search {
+  margin-top: 30px;
   background-color: $color-yellow;
-  padding: 40px;
+  padding: $gutter;
   box-shadow: 0 20px 40px rgba(black, 0.2);
+  border-radius: 3px;
+
+  @include mq("tablet"){
+      padding: 50px 30px;
+      margin-top: 50px;
+  }
 
   &-form {
     position: relative;
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include mq("tablet") {
+      flex-direction: row;
+    }
+
+    &-item {
+      width: 100%;
+      @include mq("tablet"){
+        width: auto;
+      }
+      & + & {
+        margin-top: 20px;
+        @include mq("tablet") {
+          flex-grow: 1;
+          margin-top: 0;
+          margin-left: 10px;
+        }
+      }
+    }
   }
 
-  .asd {
-    position: absolute;
-    right: 0;
+  .for-work {
+    margin-top: 10px;
+    float: right;
+
+    @include mq("tablet") {
+      position: absolute;
+      top: calc(#{$finger-size} + 20px );
+      right: 7em;
+    }
+
+    span {
+      padding-right: 10px;
+    }
   }
 }

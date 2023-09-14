@@ -18,12 +18,25 @@ a {
   text-decoration: none;
 }
 
+h1, h2, h3 {
+  text-align: center;
+}
+
 .icon {
   display: inline-block;
-  width: 2em;
+  width: 1.4em;
   height: 2em;
-  stroke: currentColor;
   fill: currentColor;
+}
+
+.select select,
+.button,
+.text {
+  border: 0;
+  font-family: inherit; //kapsayıcındaki fontu kullan
+  border-radius: $border-radius;
+  background-color: #fff;
+  color: $color-navy;
 }
 
 .button {
@@ -32,8 +45,95 @@ a {
   padding-left: 20px;
   padding-right: 20px;
   height: $finger-size;
-  color: #fff;
-  font-weight: bold;
+  color: white;
   background-color: $color-blue;
-  border-radius: $border-radius;
+
+  &-icon {
+    justify-content: center;
+    color: black;
+    padding-left: 0;
+    padding-right: 0;
+    width: $finger-size;
+    background-color: transparent;
+  }
+
+  &-navy {
+    background-color: $color-navy;
+  }
 }
+
+.text {
+  min-height: $finger-size;
+  border-radius: $border-radius;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+
+  &::placeholder, 
+  &::-webkit-datetime-edit {
+    color: rgba($color-navy, .5);
+  }
+}
+
+.select {
+  position: relative;
+  color: $color-navy;
+
+  select {
+    appearance: none;
+  display: inline-block;
+  width: 100%;
+  padding-right: 30px;
+  color: $color-navy;
+  height: $finger-size;
+  }
+
+  &-icon {
+    z-index: 1;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.form-item {
+  position: relative;
+
+  .form-item-icon {
+    z-index: 1;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $color-navy;
+  }
+  .text {
+    padding-left: 50px;
+  }
+
+  .select select {
+    padding-left: 50px;
+    
+  }
+}
+
+/* İnput date iconunun gizlenmesi */
+#custom-date::-webkit-calendar-picker-indicator {
+  position: absolute;
+  opacity: 0;
+  padding-right: 650px;
+  color: $color-navy;
+}
+
+.form-description {
+  margin-top: 5px;
+  font-size: $font-size-small; 
+  @include mq("tablet"){
+   margin-top: 20px;
+  }
+}
+
+
+
+ 
