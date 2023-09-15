@@ -11,3 +11,13 @@ $(".Header-switch").on("click", function () {
     $(".Header").addClass("menu-show");
   }
 });
+
+$('.Highlights-slider').flickity({
+  // options
+  cellAlign: 'left',
+  contain: true,
+  pageDots: false,
+  autoPlay: true,
+  autoPlay: 2000,
+  wrapAround: true,
+});

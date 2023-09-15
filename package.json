@@ -16,13 +16,23 @@
   },
   "dependencies": {
     "b": "^2.0.1",
+    "desandro-matches-selector": "^2.0.2",
+    "ev-emitter": "^2.1.2",
+    "fizzy-ui-utils": "^3.0.0",
+    "flickity": "^3.0.0",
+    "get-size": "^3.0.0",
+    "imagesloaded": "^5.0.0",
+    "jquery": "^3.7.1",
     "m": "^1.8.4",
     "ma": "^0.0.9",
     "main.css": "^3.0.0",
     "normalize.css": "^8.0.1",
     "normalize.scss": "^0.1.0",
     "s": "^1.0.0",
+    "scss": "^0.2.4",
     "sr": "^1.0.4",
-    "src": "^1.1.2"
+    "src": "^1.1.2",
+    "unidragger": "^3.0.1",
+    "unipointer": "^2.4.0"
   }
 }

@@ -16,10 +16,14 @@ body {
 a {
   color: $color-navy;
   text-decoration: none;
+  transition: .20s;
 }
 
 h1, h2, h3 {
   text-align: center;
+}
+h1 {
+  font-size: 3em;
 }
 
 .icon {
@@ -69,10 +73,6 @@ h1, h2, h3 {
   padding-right: 10px;
   width: 100%;
 
-  &::placeholder, 
-  &::-webkit-datetime-edit {
-    color: rgba($color-navy, .5);
-  }
 }
 
 .select {
@@ -140,5 +140,3 @@ h1, h2, h3 {
 }
 
 
-
- 
