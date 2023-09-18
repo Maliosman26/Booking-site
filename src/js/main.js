@@ -18,6 +18,6 @@ $(".Highlights-slider").flickity({
   contain: true,
   pageDots: true,
   autoPlay: true,
-  autoPlay: 5000,
+  autoPlay: 6000,
   wrapAround: true,
 });
