@@ -12,11 +12,11 @@ $(".Header-switch").on("click", function () {
   }
 });
 
-$('.Highlights-slider').flickity({
+$(".Highlights-slider").flickity({
   // options
-  cellAlign: 'left',
+  cellAlign: "left",
   contain: true,
-  pageDots: false,
+  pageDots: true,
   autoPlay: true,
   autoPlay: 2000,
   wrapAround: true,
