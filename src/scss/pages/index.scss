@@ -133,17 +133,17 @@
 }
 
 .Highlights {
-  margin-bottom: 200px;
+  /* margin-bottom: 0px; */
   overflow: hidden;
 
   @include mq("tablet") {
     margin-top: -120px;
   }
-  
+
   &-slider {
     .flickity-viewport {
       @include mq("tablet") {
-        overflow: visible;
+        overflow: hidden;
       }
     }
   }
@@ -224,6 +224,55 @@
         margin-top: 2px;
         margin-right: 34%;
       }
+    }
+  }
+}
+
+.Highlightsfooter {
+  height: 500px;
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+
+    .content {
+      display: flex;
+      background-color: white;
+      padding: 40px 40px;
+      margin: 70px 10px;
+      padding-left: 40px;
+      width: 283px;
+      height: 120px;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      h2 {
+        color: $color-navy;
+      }
+      p {
+        color: rgb(55, 55, 55);
+        margin-bottom: 0;
+      }
+      a {
+        color: $color-blue;
+        text-decoration: underline;
+        font-size: 1em;
+        font-weight: bold;
+      }
+    }
+    .content-1 {
+      background-color: $color-white;
+      width: 385px;
+      height: 120px;
+      margin-left: 0;
+      margin-right: 10;
+    }
+    .content-2 {
+      background-color: $color-white;
+      margin-left: 0;
+      width: 343px;
+      height: 120px;
     }
   }
 }
