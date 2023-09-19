@@ -4,10 +4,11 @@
   padding-bottom: 30px;
   background: $color-navy url(img/showcase_back.jpg) no-repeat center center /
     cover;
+  text-align: center;
 
   @include mq("tablet") {
     padding-top: 80px;
-    padding-bottom: 200px;
+    padding-bottom: 170px;
   }
 
   &-title {
@@ -16,31 +17,50 @@
     }
   }
   &-subtitle {
+    margin-top: 10px;
     @include mq("tablet") {
       font-size: 1.4em;
     }
   }
 
   &-shortlink {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 65px;
+    margin-top: 40px;
+    @include mq("tablet") {
+      margin-top: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
     a {
+      display: block;
       color: inherit;
-      padding-left: 50px;
+      @include mq("tablet") {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      & + a {
+        margin-top: 10px;
+        @include mq("tablet") {
+          margin-top: 0;
+        }
+      }
 
       &:hover {
         text-decoration: underline;
       }
     }
   }
+
   &-store {
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin-top: 80px;
+    margin-top: 10px;
+
+    @include mq("tablet") {
+      margin-top: 60px;
+    }
 
     a {
       padding: 11px 23px;
@@ -65,7 +85,7 @@
   border-radius: 3px;
 
   @include mq("tablet") {
-    padding: 30px 30px;
+    padding: 50px;
     margin-top: 50px;
     margin-left: 100px;
     margin-right: 100px;
@@ -113,15 +133,18 @@
 }
 
 .Highlights {
-  .container {
-    max-width: none;
-  }
   margin-bottom: 200px;
-  margin-top: -120px;
+  overflow: hidden;
 
+  @include mq("tablet") {
+    margin-top: -120px;
+  }
+  
   &-slider {
     .flickity-viewport {
-      overflow: visible;
+      @include mq("tablet") {
+        overflow: visible;
+      }
     }
   }
 

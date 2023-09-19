@@ -23,7 +23,7 @@ h2 {
   text-align: center;
 }
 h1 {
-  font-size: 3em;
+  font-size: 2em;
 }
 
 .icon {
@@ -33,12 +33,10 @@ h1 {
   fill: currentColor;
 }
 
-.select select,
-.button,
-.text {
-  border: 0;
-  font-family: inherit; //kapsayıcındaki fontu kullan
+.select select, .button, .text {
+  font-family: inherit;
   border-radius: $border-radius;
+  border: 0;
   background-color: #fff;
   color: $color-navy;
 }
@@ -72,6 +70,11 @@ h1 {
   padding-left: 10px;
   padding-right: 10px;
   width: 100%;
+
+  &::placeholder {
+    color: $color-navy;
+  }
+
 }
 
 .select {
@@ -98,8 +101,7 @@ h1 {
 }
 
 .form-item {
-  position: relative;
-
+  position: relative; 
   .form-item-icon {
     pointer-events: none;
     z-index: 1;
@@ -108,9 +110,11 @@ h1 {
     top: 50%;
     transform: translateY(-50%);
     color: $color-navy;
+    
   }
   .text {
     padding-left: 50px;
+   
   }
 
   .select select {
@@ -118,12 +122,10 @@ h1 {
   }
 }
 
-/* İnput date iconunun gizlenmesi */
+/* İnput date ile otomatik gelen iconun gizlenmesi */
 #custom-date::-webkit-calendar-picker-indicator {
-  position: absolute;
-  opacity: 0;
-  padding-right: 650px;
-  color: $color-navy;
+  position: relative;
+  opacity: 1; //0 yaparsan gizlenir
 }
 
 .form-description {
