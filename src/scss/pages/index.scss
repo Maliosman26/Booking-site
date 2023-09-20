@@ -171,8 +171,8 @@
         height: 100%;
         background-image: linear-gradient(
           to bottom,
-          rgba(181, 182, 186, 0.5) 0%,
-          rgba(40, 47, 173, 0.685) 100%
+          rgba(181, 186, 182, 0.5) 0%,
+          rgba(25, 187, 52, 0.385) 100%
         );
       }
 
@@ -211,7 +211,6 @@
       padding-top: 60px;
       font-size: 14px;
 
-
       h3 {
         margin-bottom: 3px;
         margin-right: 5px;
@@ -237,7 +236,7 @@
 }
 
 .Highlightsfooter {
-  height: 500px;
+  height: auto;
   .container {
     @include mq("tablet") {
       display: flex;
@@ -258,7 +257,7 @@
         justify-content: center;
         align-items: flex-start;
         flex-direction: column;
-        font-size: .9em;
+        font-size: 0.9em;
       }
 
       margin-top: 30px;
@@ -302,6 +301,214 @@
 
       margin-top: 30px;
       background-color: $color-soft-blue;
+    }
+  }
+}
+
+.MoreDestinations {
+  height: 10px;
+  padding-top: 0;
+  color: $color-navy;
+  @include mq("tablet") {
+    padding-top: 0;
+    height: 10px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    align-items: center;
+    padding-top: 40px;
+
+    @include mq("tablet") {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 20px;
+      height: auto;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 25;
+      @include mq("tablet") {
+        font-size: 2em;
+      }
+    }
+    h3 {
+      font-size: 13px;
+      padding-top: 10px;
+
+      @include mq("tablet") {
+        font-size: 1em;
+        padding-top: 0px;
+      }
+    }
+    a,
+    p,
+    small {
+      font-size: 10px;
+      padding-top: 20px;
+      line-height: 1;
+      @include mq("tablet") {
+        font-size: 11px;
+        padding-top: 20px;
+      }
+    }
+
+    .Destination {
+      @include mq("tablet") {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        height: 300px;
+        justify-content: space-evenly;
+      }
+
+      &1,
+      &2,
+      &3,
+      &4,
+      &5,
+      &6 {
+        display: flex;
+        color: gray;
+
+        @include mq("tablet") {
+          display: flex;
+          color: gray;
+          width: 32%;
+          height: 37.5%;
+        }
+
+        &-img {
+          padding-top: 20px;
+          padding-right: 10px;
+          margin: 2;
+
+          @include mq("tablet") {
+            padding: 2;
+            padding-right: 10px;
+            margin: 2;
+          }
+
+          img {
+            width: 100px;
+            height: 100px;
+            filter: hue-rotate(320deg);
+            opacity: 0.9;
+          }
+        }
+
+        &-content,
+        &-alldestinations {
+          @include mq("tablet") {
+            padding: 2;
+            margin: 2;
+            border-bottom: inset;
+          }
+          padding: 2;
+          margin: 2;
+          border-bottom: inset;
+
+          p {
+            font-size: 13px;
+            margin: 3;
+
+            @include mq("tablet") {
+              font-size: 13px;
+              margin: 4;
+            }
+            a {
+              color: gray;
+              text-decoration: underline;
+            }
+          }
+          h3 {
+            margin: 0;
+            color: $color-navy;
+          }
+
+          svg {
+            transform: translateY(6px);
+          }
+
+          #air {
+            width: 12px;
+            height: 12px;
+            padding: 2.1px;
+            color: white;
+            background-color: #35a8eb;
+            @include mq("tablet") {
+              width: 12px;
+              height: 12px;
+              padding: 3px;
+              color: white;
+              background-color: #35a8eb;
+            }
+          }
+          #arrowright {
+            @include mq("tablet") {
+              width: 30px;
+              height: 30px;
+              position: absolute;
+              transform: translate(200px, -20px);
+            }
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            transform: translate(130px, -20px);
+          }
+
+          span {
+            background-color: rgb(242, 192, 66);
+            padding: 0.4px 8px 2px;
+            margin-left: 8px;
+            color: white;
+          }
+        }
+      }
+      &6 {
+        @include mq("tablet") {
+          height: 37.5%;
+        }
+        background-color: #35a8eb;
+        height: 70px;
+        align-items: center;
+
+        &-alldestinations {
+          border: none;
+        }
+
+        h2 {
+          @include mq("tablet") {
+            color: white;
+            margin-left: 40px;
+            font-weight: 100;
+            letter-spacing: 1px;
+          }
+          color: white;
+          margin-left: 20px;
+          font-weight: 100;
+          letter-spacing: 1px;
+          font-size: 1em;
+        }
+        #arrowright {
+          @include mq("tablet") {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            transform: translate(300px, -43px);
+            color: white;
+          }
+          width: 30px;
+          height: 30px;
+          position: absolute;
+          transform: translate(250px, -39px);
+          color: white;
+        }
+      }
     }
   }
 }
