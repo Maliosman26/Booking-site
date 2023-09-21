@@ -640,16 +640,25 @@
   height: 600px;
   .container {
     .Discover-title {
-      font-size: 1.2em;
+      font-size: 0.9em;
       color: $color-navy;
       text-align: center;
-      padding-bottom: 50px;
+      padding-bottom: 0px;
+      @include mq("tablet") {
+        padding-bottom: 10px;
+        font-size: 1em;
+      }
     }
 
     .Countries {
       display: grid;
-      grid-template-columns: repeat(4, 285px);
+      gap: 20px;
       justify-items: center;
+      @include mq("tablet") {
+        display: grid;
+        grid-template-columns: repeat(4, 265px);
+        justify-items: center;
+      }
 
       .box1,
       .box2,
@@ -665,7 +674,7 @@
         color: #fff;
 
         h1 {
-          font-size: 1.7em;
+          font-size: 1.5em;
           margin: 0;
         }
 
@@ -704,6 +713,10 @@
 
       .box4 {
         background-color: $color-blue;
+        margin-bottom: 20px;
+        @include mq("tablet") {
+          margin-bottom: 0px;
+        }
       }
 
       p,
@@ -711,6 +724,11 @@
         font-size: 11;
         position: relative;
         z-index: 1;
+        @include mq("tablet") {
+          font-size: 11;
+          position: relative;
+          z-index: 1;
+        }
       }
     }
   }
