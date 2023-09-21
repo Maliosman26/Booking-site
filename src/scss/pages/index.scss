@@ -661,7 +661,7 @@
         align-items: flex-start;
         padding: 0 20 20 30;
         width: 210;
-        height: 210;
+        height: 232;
         color: #fff;
 
         h1 {
@@ -671,7 +671,7 @@
 
         img {
           width: 262px;
-          height: 232px;
+          height: 252px;
           position: absolute;
           z-index: -1;
           transform: translate(-30px, 20px);
@@ -681,7 +681,7 @@
           width: 25px;
           height: 25px;
           position: absolute;
-          transform: translate(180px, -160px);
+          transform: translate(180px, -180px);
         }
       }
       .box1,
@@ -691,7 +691,7 @@
           content: "";
           position: absolute;
           width: 262;
-          height: 232;
+          height: 252;
           background-image: linear-gradient(
             to bottom,
             rgba(83, 83, 83, 0.41) 0%,
