@@ -236,20 +236,19 @@
 }
 
 .Highlightsfooter {
-  height: auto;
   .container {
     @include mq("tablet") {
       display: flex;
       justify-content: center;
       align-items: center;
       justify-content: space-between;
+      padding-top: 30px;
     }
 
     .content {
       @include mq("tablet") {
         display: flex;
         padding: 40px 40px;
-        margin: 70px 10px;
         padding-left: 40px;
         width: 283px;
         height: 120px;
@@ -263,6 +262,7 @@
       margin-top: 30px;
       background-color: $color-soft-blue;
       font-size: 13;
+      padding: 2px 0px 20px 20px;
 
       h2 {
         color: $color-navy;
@@ -284,6 +284,7 @@
         height: 120px;
         margin-left: 0;
         margin-right: 10;
+        /* margin-top: 0px; */
         background-color: $color-white;
       }
 
@@ -294,6 +295,7 @@
     .content-2 {
       @include mq("tablet") {
         margin-left: 0;
+        /* margin-top: 0px; */
         width: 343px;
         height: 120px;
         background-color: $color-white;
@@ -306,12 +308,12 @@
 }
 
 .MoreDestinations {
-  height: 10px;
+  height: 830px;
   padding-top: 0;
   color: $color-navy;
   @include mq("tablet") {
-    padding-top: 0;
-    height: 10px;
+    padding-top: 25;
+    height: 400;
   }
   .container {
     display: flex;
@@ -319,7 +321,7 @@
     justify-content: center;
     height: auto;
     align-items: center;
-    padding-top: 40px;
+    padding-top: 30px;
 
     @include mq("tablet") {
       display: flex;
@@ -472,10 +474,12 @@
       &6 {
         @include mq("tablet") {
           height: 37.5%;
+          margin-top: 0px;
         }
         background-color: #35a8eb;
         height: 70px;
         align-items: center;
+        margin-top: 10px;
 
         &-alldestinations {
           border: none;
@@ -507,6 +511,125 @@
           position: absolute;
           transform: translate(250px, -39px);
           color: white;
+        }
+      }
+    }
+  }
+}
+
+.MoreDestinationsfooter {
+  @include mq("tablet") {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    padding: 2px;
+    padding-top: 20px;
+  }
+  margin-top: 20px;
+  .container {
+    @include mq("tablet") {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin: 2px;
+      padding: 2px;
+    }
+
+    .content {
+      @include mq("tablet") {
+        display: flex;
+        margin: 2px;
+        padding: 2px;
+      }
+
+      img {
+        width: 50px;
+        height: 50px;
+        @include mq("tablet") {
+          width: 60px;
+          height: 60px;
+        }
+      }
+
+      p,
+      a {
+        font-size: 12px;
+        @include mq("tablet") {
+          font-size: 0.9em;
+        }
+      }
+
+      h2 {
+        margin: 0;
+        font-size: 1em;
+        @include mq("tablet") {
+          font-size: 1.5em;
+        }
+      }
+
+      .title1,
+      a {
+        color: $color-blue;
+      }
+
+      .title2 {
+        color: $color-navy;
+      }
+
+      &1 {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 2px;
+        padding: 2px;
+
+        &-img {
+          margin: 10px;
+          padding: 10px;
+
+          &-svg {
+            width: 100%;
+            height: 120px;
+          }
+        }
+        &-content {
+          margin: 10px;
+          padding: 10px;
+          margin-bottom: 0;
+          padding-bottom: 0;
+          @include mq("tablet") {
+            margin: 10px;
+            padding: 10px;
+          }
+        }
+      }
+
+      &2 {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 2px;
+        padding: 2px;
+
+        &-img {
+          margin: 10px;
+          padding: 10px;
+
+          &-svg {
+            width: 100%;
+            height: 120px;
+          }
+        }
+
+        &-content {
+          margin: 10px;
+          padding: 10px;
+
+          a {
+            text-decoration: underline;
+          }
         }
       }
     }
