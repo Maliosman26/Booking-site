@@ -637,7 +637,10 @@
 }
 
 .Discover {
-  height: 400px;
+  height: 1140px;
+  @include mq("tablet") {
+    height: 400px;
+  }
   .container {
     .Discover-title {
       font-size: 0.9em;
@@ -735,11 +738,19 @@
 }
 
 .Aparthotels {
-  padding-bottom: 300px;
+  height: 1650px;
+  @include mq("tablet") {
+    height: 700px;
+  }
   .container {
     border-bottom: inset;
-    height: 600px;
     text-align: center;
+    height: 1600px;
+    @include mq("tablet") {
+      border-bottom: inset;
+      text-align: center;
+      height: 600px;
+    }
 
     .Aparthotels-title {
       font-size: 1em;
@@ -747,10 +758,18 @@
     }
 
     .Suites {
-      height: 400px;
+      height: 1400px;
       display: flex;
-      gap: 20px;
-      justify-content: center;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+      @include mq("tablet") {
+        height: 400px;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+      }
 
       &-1 {
         width: 260px;
@@ -786,7 +805,7 @@
           padding: 0 0 4 25;
           margin-top: 20px;
           text-align: left;
-          font-size: 15px;
+          font-size: 14px;
 
           h3 {
             margin: 0;
@@ -810,10 +829,11 @@
 
     .Aparthotels-button {
       button {
-        padding: 25 20 25 35;
+        padding: 23 20 23 35;
+        font-size: 13;
       }
       svg {
-        width: 27px;
+        width: 24px;
       }
     }
   }
