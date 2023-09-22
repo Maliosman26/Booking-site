@@ -855,9 +855,11 @@
 .Deciding {
   height: 500px;
   .container {
-    height: 400px;
-    border: 1px solid black;
+    height: 700px;
     text-align: center;
+    @include mq("tablet") {
+      height: 400px;
+    }
 
     .Deciding-title {
       color: $color-navy;
@@ -889,9 +891,17 @@
 
     .Deciding-cities {
       display: flex;
-      justify-content: center;
+      flex-wrap: wrap;
+      flex-direction: row;
       margin-top: 40px;
-      gap: 45px;
+
+      @include mq("tablet") {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+        gap: 45px;
+      }
 
       &-item {
         padding: 10px 10px;
