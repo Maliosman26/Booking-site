@@ -787,6 +787,7 @@
           width: 90px;
           height: 40px;
           background-color: $color-blue;
+          z-index: 1;
 
           a {
             font-size: 18px;
@@ -824,6 +825,18 @@
             }
           }
         }
+        &:before {
+          content: "";
+          position: absolute;
+          width: 230;
+          height: 160;
+          background-image: linear-gradient(
+            to bottom,
+            rgba(83, 83, 83, 0.41) 0%,
+            rgba(8, 135, 29, 0.479) 100%
+          );
+          z-index: 1;
+        }
       }
     }
 
@@ -838,3 +851,4 @@
     }
   }
 }
+
