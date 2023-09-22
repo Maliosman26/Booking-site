@@ -637,7 +637,7 @@
 }
 
 .Discover {
-  height: 600px;
+  height: 400px;
   .container {
     .Discover-title {
       font-size: 0.9em;
@@ -729,6 +729,91 @@
           position: relative;
           z-index: 1;
         }
+      }
+    }
+  }
+}
+
+.Aparthotels {
+  padding-bottom: 300px;
+  .container {
+    border-bottom: inset;
+    height: 600px;
+    text-align: center;
+
+    .Aparthotels-title {
+      font-size: 1em;
+      color: $color-navy;
+    }
+
+    .Suites {
+      height: 400px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+
+      &-1 {
+        width: 260px;
+        height: 330px;
+        position: relative;
+        background-color: white;
+
+        .SuiteRating {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          right: 0;
+          margin-top: 100;
+          width: 90px;
+          height: 40px;
+          background-color: $color-blue;
+
+          a {
+            font-size: 18px;
+            color: white;
+            font-weight: bolder;
+          }
+
+          small {
+            transform: translateY(2px);
+            color: white;
+            opacity: 30%;
+          }
+        }
+
+        .content {
+          padding: 0 0 4 25;
+          margin-top: 20px;
+          text-align: left;
+          font-size: 15px;
+
+          h3 {
+            margin: 0;
+            color: $color-navy;
+          }
+          small {
+            color: gray;
+            svg {
+              transform: translateY(4px);
+            }
+
+            a {
+              padding-left: 10px;
+              text-decoration: underline;
+              color: currentColor;
+            }
+          }
+        }
+      }
+    }
+
+    .Aparthotels-button {
+      button {
+        padding: 25 20 25 35;
+      }
+      svg {
+        width: 27px;
       }
     }
   }
