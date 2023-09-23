@@ -5,21 +5,23 @@
   background: $color-navy url(img/showcase_back.jpg) no-repeat center center /
     cover;
   text-align: center;
-
   @include mq("tablet") {
     padding-top: 80px;
     padding-bottom: 170px;
   }
 
-  &-title {
+  h1 {
+    font-size: 2.2em;
     @include mq("tablet") {
       font-size: 3em;
     }
   }
-  &-subtitle {
-    margin-top: 10px;
+  h3 {
+    font-size: 1em;
+    font-weight: lighter;
     @include mq("tablet") {
-      font-size: 1.4em;
+      font-size: 1.5em;
+      font-weight: lighter;
     }
   }
 
@@ -924,23 +926,32 @@
   color: white;
   padding-top: 30px;
   padding-bottom: 30px;
-  background: $color-navy url(img/alt_back.jpg) no-repeat center center /
-    cover;
+  background-image: url(img/alt_back.jpg); /* Arka plan görüntüsü */
+  background-position: center center; /* Görüntüyü merkeze yerleştir */
   text-align: center;
+  margin-top: 200px;
   margin-bottom: 70px;
 
   @include mq("tablet") {
     padding-top: 100px;
     padding-bottom: 100px;
+    margin-top: 0px;
     margin-bottom: 100px;
+    background-image: url(img/alt_back.jpg); /* Arka plan görüntüsü */
+    background-position: center; /* Görüntüyü merkeze yerleştir */
+    background-size: 100%; /* Görüntüyü %50 oranında küçült */
+    text-align: center;
   }
 
   h1 {
     margin-bottom: 0;
+    font-size: 2.2em;
   }
   h3 {
-    margin-top: 0;
-    margin-bottom: 30;
+    margin-top: 8;
+    margin-bottom: 40;
+    font-size: 0.9em;
+    font-weight: lighter;
   }
 
   .Showcase-bottom-form {
@@ -958,10 +969,22 @@
         padding-left: 46px;
         width: 300;
         height: 40px;
+        @include mq("tablet") {
+          padding-left: 46px;
+          width: 300;
+          height: 40px;
+        }
       }
 
       ::placeholder {
         color: $color-navy;
+        font-size: 13px;
+      }
+
+      .email:not(:placeholder-shown) {
+        //Placeholder dışında herhangi bir metin girildiğinde;
+        color: $color-navy;
+        font-size: 13px;
       }
 
       a {
