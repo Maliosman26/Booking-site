@@ -639,7 +639,7 @@
 }
 
 .Discover {
-  height: 1140px;
+  height: auto;
   @include mq("tablet") {
     height: 400px;
   }
@@ -740,9 +740,9 @@
 }
 
 .Aparthotels {
-  height: 1650px;
+  height: auto;
   @include mq("tablet") {
-    height: 700px;
+    height: 650px;
   }
   .container {
     border-bottom: inset;
@@ -855,12 +855,14 @@
 }
 
 .Deciding {
-  height: 450px;
+  height: auto;
   .container {
     height: 700px;
+    margin-top: 60px;
     text-align: center;
     @include mq("tablet") {
       height: 400px;
+      margin-top: 0px;
     }
 
     .Deciding-title {
@@ -929,13 +931,11 @@
   background-image: url(img/alt_back.jpg); /* Arka plan görüntüsü */
   background-position: center center; /* Görüntüyü merkeze yerleştir */
   text-align: center;
-  margin-top: 200px;
   margin-bottom: 70px;
 
   @include mq("tablet") {
     padding-top: 100px;
     padding-bottom: 100px;
-    margin-top: 0px;
     margin-bottom: 100px;
     background-image: url(img/alt_back.jpg); /* Arka plan görüntüsü */
     background-position: center; /* Görüntüyü merkeze yerleştir */
@@ -1006,6 +1006,67 @@
 
       label {
         font-size: 12px;
+      }
+    }
+  }
+}
+
+.Love {
+  height: auto;
+  .container {
+    height: 570px;
+    text-align: center;
+    @include mq("tablet") {
+      height: 400px;
+    }
+
+    .Love-title {
+      color: $color-navy;
+    }
+
+    .Love-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1px;
+      font-size: 11.6px;
+      padding-top: 25px;
+
+      &-2,
+      &-3 {
+        .button {
+          background: none;
+          color: $color-navy;
+          padding-right: 9;
+        }
+      }
+    }
+
+    .Love-cities {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      margin-top: 40px;
+
+      @include mq("tablet") {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+        gap: 45px;
+      }
+
+      &-item {
+        padding: 10px 10px;
+        text-align: left;
+
+        h5 {
+          margin: 0;
+          color: $color-navy;
+          font-weight: normal;
+        }
+        small {
+          color: gray;
+        }
       }
     }
   }
