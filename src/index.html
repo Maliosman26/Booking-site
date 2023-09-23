@@ -52,6 +52,11 @@
           d="M24 19.999l-5.713-5.713 13.713-10.286-4-4-17.141 6.858-5.397-5.397c-1.556-1.556-3.728-1.928-4.828-0.828s-0.727 3.273 0.828 4.828l5.396 5.396-6.858 17.143 4 4 10.287-13.715 5.713 5.713v7.999h4l2-6 6-2v-4l-7.999 0z">
         </path>
       </symbol>
+      <symbol id="icon-email" viewBox="0 0 24 24">
+        <path
+          d="M20.016 8.016v-2.016l-8.016 5.016-8.016-5.016v2.016l8.016 4.969zM20.016 3.984q0.797 0 1.383 0.609t0.586 1.406v12q0 0.797-0.586 1.406t-1.383 0.609h-16.031q-0.797 0-1.383-0.609t-0.586-1.406v-12q0-0.797 0.586-1.406t1.383-0.609h16.031z">
+        </path>
+      </symbol>
     </defs>
   </svg>
 
@@ -104,7 +109,7 @@
   <main class="Main">
     <section class="Showcase">
       <div class="container">
-        <h1>More deals than days in a year.</h1>
+        <h1 style="font-size: 3em;">More deals than days in a year.</h1>
         <h3>From cosy country homes to funky city flats</h3>
 
         <div class="Search">
@@ -684,7 +689,27 @@
       </div>
     </section>
 
+    <section class="Showcase-bottom">
+      <div class="container">
+        <h1 style="font-size: 2.5em;">Save time, save money!</h1>
+        <h3 style="font-size: 1em; font-weight: lighter;">Sign up and we'll send the best deals to you</h3>
 
+        <form class="Showcase-bottom-form" action="">
+          <div class="formitem1">
+            <svg class="icon icon-email">
+              <use xlink:href="#icon-email"></use>
+            </svg>
+            <input class="email" type="email" placeholder="Your email">
+            <a class="Header-menu-property button" href="">Subscribe</a>
+          </div>
+          <div class="formitem2">
+            <input class="checkbox" type="checkbox" checked>
+            <label>Send me a link to get the FREE Booking.com app!</label>
+          </div>
+
+        </form>
+      </div>
+    </section>
 
 
 

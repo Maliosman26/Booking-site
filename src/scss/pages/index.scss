@@ -853,7 +853,7 @@
 }
 
 .Deciding {
-  height: 500px;
+  height: 450px;
   .container {
     height: 700px;
     text-align: center;
@@ -915,6 +915,74 @@
         small {
           color: gray;
         }
+      }
+    }
+  }
+}
+
+.Showcase-bottom {
+  color: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: $color-navy url(img/showcase_back.jpg) no-repeat center center /
+    cover;
+  text-align: center;
+  margin-bottom: 70px;
+
+  @include mq("tablet") {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-bottom: 100px;
+  }
+
+  h1 {
+    margin-bottom: 0;
+  }
+  h3 {
+    margin-top: 0;
+    margin-bottom: 30;
+  }
+
+  .Showcase-bottom-form {
+    .formitem1 {
+      position: relative;
+
+      svg {
+        color: $color-navy;
+        position: absolute;
+        padding-left: 15px;
+        padding-top: 4px;
+      }
+
+      .email {
+        padding-left: 46px;
+        width: 300;
+        height: 40px;
+      }
+
+      ::placeholder {
+        color: $color-navy;
+      }
+
+      a {
+        width: 80;
+        transform: translate(-10px, -0.8px);
+      }
+    }
+
+    .formitem2 {
+      padding-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+
+      .checkbox {
+        width: 16px;
+        height: 16px;
+      }
+
+      label {
+        font-size: 12px;
       }
     }
   }
