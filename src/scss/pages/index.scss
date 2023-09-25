@@ -367,7 +367,7 @@
         flex-wrap: wrap;
         align-items: center;
         height: 300px;
-        justify-content: space-evenly;
+        justify-content: space-between;
       }
 
       &1,
@@ -661,8 +661,8 @@
       justify-items: center;
       @include mq("tablet") {
         display: grid;
-        grid-template-columns: repeat(4, 265px);
-        justify-items: center;
+        grid-template-columns: repeat(4, 260px);
+        justify-content: space-between;
       }
 
       .box1,
@@ -745,11 +745,9 @@
     height: 650px;
   }
   .container {
-    border-bottom: inset;
     text-align: center;
     height: 1600px;
     @include mq("tablet") {
-      border-bottom: inset;
       text-align: center;
       height: 600px;
     }
@@ -770,7 +768,7 @@
         display: flex;
         flex-direction: row;
         gap: 20px;
-        justify-content: center;
+        justify-content: space-between;
       }
 
       &-1 {
@@ -843,6 +841,8 @@
     }
 
     .Aparthotels-button {
+      border-bottom: inset;
+      padding-bottom: 90px;
       button {
         padding: 23 20 23 35;
         font-size: 13;
@@ -879,7 +879,7 @@
     .Deciding-buttons {
       display: flex;
       justify-content: center;
-      gap: 1px;
+      gap: 20px;
       font-size: 11.6px;
       padding-top: 20px;
 
@@ -901,14 +901,13 @@
 
       @include mq("tablet") {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         margin-top: 40px;
-        gap: 45px;
+        gap: 100px;
       }
 
       &-item {
-        padding: 10px 10px;
         text-align: left;
 
         h5 {
@@ -1027,7 +1026,7 @@
     .Love-buttons {
       display: flex;
       justify-content: center;
-      gap: 1px;
+      gap: 25px;
       font-size: 11.6px;
       padding-top: 25px;
 
@@ -1049,14 +1048,13 @@
 
       @include mq("tablet") {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         margin-top: 40px;
-        gap: 45px;
+        gap: 100px;
       }
 
       &-item {
-        padding: 10px 10px;
         text-align: left;
 
         h5 {
@@ -1068,6 +1066,88 @@
           color: gray;
         }
       }
+    }
+  }
+}
+
+.Footer {
+  padding-top: 60px;
+  padding-bottom: 90px;
+  background-color: rgb(10, 83, 174);
+  color: white;
+
+  .Ul-1 {
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(#ddd, 0.2); /* %20 saydamlıkta siyah border bottom */
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      list-style-type: none; //ul simgelerini kaldırır.
+      padding-inline-start: 0; //ul elementinin user agent stylesheet tarafından gelen paddingi sıfırlama
+    }
+  }
+  .Ul-2 {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+
+    &-item {
+      list-style-type: none;
+      padding-inline-start: 0;
+      font-size: 12px;
+      flex: 1;
+      li {
+        padding-bottom: 10px;
+      }
+    }
+
+    &-store {
+      display: flex;
+      flex-direction: column;
+      flex: 2;
+
+      .stores {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 25px;
+        border-bottom: 1px solid rgba(#ddd, 0.2);
+        a {
+          padding: 10px 25px 10px 15px;
+
+          width: 100px;
+          height: 25px;
+          background-color: rgb(234, 241, 247);
+          border-radius: $border-radius;
+          &:hover {
+            background-color: rgb(197, 197, 197);
+            opacity: 0.8;
+          }
+        }
+      }
+
+      .paragraph {
+        margin-top: 20px;
+        font-size: 13px;
+
+        span {
+          opacity: 0.4;
+          font-size: 13px;
+        }
+        a {
+          color: white;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .Ul-3 {
+    text-align: center;
+    .Copyright {
+      font-size: 12px;
+      opacity: 0.4;
     }
   }
 }
