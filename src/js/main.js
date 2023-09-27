@@ -15,9 +15,11 @@ $(".Header-switch").on("click", function () {
 $(".Highlights-slider").flickity({
   // options
   cellAlign: "left",
-  contain: true,
-  pageDots: true,
-  autoPlay: true,
-  autoPlay: 4000,
-  wrapAround: true,
+  contain: true, 
+  pageDots: false,  //Sayfa işaretleri
+  autoPlay: false,  //Otomatik kaydırma
+  /* autoPlay: 4000, */  //4 saniyede bir kaydır
+  wrapAround: false, //Kaydırmayı devam ettir
+  prevNextButtons: false,
+  freeScroll: false, //Serbestçe kaydırma
 });
