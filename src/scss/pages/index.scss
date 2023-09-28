@@ -141,7 +141,7 @@
 
   @include mq("tablet") {
     margin-top: -90px;
-    overflow: visible;
+    overflow: hidden;
   }
 
   &-slider {
@@ -153,11 +153,18 @@
   }
 
   &-item {
-    width: 300px;
+    width: 315px;
     height: 200px;
     background-color: white;
     margin-right: 30px;
     color: $color-navy;
+    @include mq("tablet") {
+      width: 300px;
+      height: 200px;
+      background-color: white;
+      margin-right: 30px;
+      color: $color-navy;
+    }
 
     &-show {
       width: 100%;
@@ -236,6 +243,14 @@
       }
     }
   }
+  #still {
+    width: 420px;
+    margin-left: 20px;
+    @include mq("tablet") {
+      width: 420px;
+      margin-left: 0;
+    }
+  }
 }
 
 .Highlightsfooter {
@@ -311,7 +326,7 @@
 }
 
 .MoreDestinations {
-  height: 830px;
+  height: 960px;
   padding-top: 0;
   color: $color-navy;
   @include mq("tablet") {
@@ -350,25 +365,20 @@
         padding-top: 0px;
       }
     }
-    a,
-    p,
-    small {
-      font-size: 10px;
-      padding-top: 20px;
-      line-height: 1;
-      @include mq("tablet") {
-        font-size: 11px;
-        padding-top: 20px;
-      }
-    }
 
     .Destination {
+      display: flex;
+      flex-direction: column;
+      row-gap: 30px;
+      margin-top: 20px;
       @include mq("tablet") {
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
-        height: 300px;
         justify-content: space-between;
+        margin-top: 50px;
+        row-gap: 35px;
       }
 
       &1,
@@ -379,7 +389,6 @@
       &6 {
         display: flex;
         color: gray;
-
         @include mq("tablet") {
           display: flex;
           color: gray;
@@ -388,45 +397,48 @@
         }
 
         &-img {
-          padding-top: 20px;
-          padding-right: 10px;
-          margin: 2;
-
-          @include mq("tablet") {
-            padding: 2;
-            padding-right: 10px;
-            margin: 2;
-          }
-
           img {
-            width: 100px;
-            height: 100px;
-            filter: hue-rotate(320deg);
+            width: 114px;
+            height: 114px;
+            /*  filter: hue-rotate(320deg); */
             opacity: 0.9;
+          }
+          padding-right: 20px;
+          @include mq("tablet") {
+            padding: 0;
+            padding-right: 20px;
+            margin: 0;
+
+            img {
+              width: 114px;
+              height: 114px;
+              /*  filter: hue-rotate(320deg); */
+              opacity: 0.9;
+            }
           }
         }
 
         &-content,
         &-alldestinations {
           @include mq("tablet") {
-            padding: 2;
-            margin: 2;
-            border-bottom: inset;
+            padding: 0;
+            margin: 0;
+            border-bottom: 1px solid rgba(230, 235, 243);
           }
-          padding: 2;
-          margin: 2;
-          border-bottom: inset;
+          padding: 0;
+          margin: 0;
+          border-bottom: 1px solid rgba(230, 235, 243);
 
           p {
             font-size: 13px;
-            margin: 3;
-
+            padding-left: 2px;
             @include mq("tablet") {
               font-size: 13px;
-              margin: 4;
+              padding-left: 2px;
             }
             a {
-              color: gray;
+              color: #a6adb9;
+              opacity: 90%;
               text-decoration: underline;
             }
           }
@@ -435,14 +447,19 @@
             margin-bottom: 0;
             color: $color-navy;
             @include mq("tablet") {
-              margin-top: 0;
-              margin-bottom: 10;
+              margin-top: 5;
+              margin-bottom: 0;
               color: $color-navy;
+              padding-left: 3px;
             }
 
             a {
-              font-size: 1em;
+              font-size: 1.2em;
               padding-top: 0;
+              @include mq("tablet") {
+                font-size: 1em;
+                padding-top: 0;
+              }
             }
           }
 
@@ -455,45 +472,76 @@
             height: 12px;
             padding: 2.1px;
             color: white;
-            background-color: #35a8eb;
+            background-color: #0daeeb;
             @include mq("tablet") {
               width: 12px;
               height: 12px;
               padding: 3px;
               color: white;
-              background-color: #35a8eb;
+              background-color: #0daeeb;
             }
           }
-          #arrowright {
+          .icon-arrow_right {
             @include mq("tablet") {
-              width: 30px;
-              height: 30px;
+              width: 25px;
+              height: 25px;
               position: absolute;
-              transform: translate(200px, -20px);
+              transform: translate(165px, -15px);
+              color: #a6adb9;
+              opacity: 0.9;
             }
-            width: 30px;
-            height: 30px;
+            width: 25px;
+            height: 25px;
             position: absolute;
-            transform: translate(175px, -20px);
+            transform: translate(165px, -15px);
+            color: #a6adb9;
+            opacity: 0.9;
           }
 
           span {
-            background-color: rgb(242, 192, 66);
-            padding: 0.4px 8px 2px;
+            background-color: rgb(248, 178, 9);
+            padding: 0px 8px 3px;
             margin-left: 8px;
+            font-weight: 600;
             color: white;
+          }
+        }
+
+        small {
+          font-size: 10px;
+          @include mq("tablet") {
+            font-size: 11px;
+            display: inline-block;
+            transform: translateY(-5px);
+          }
+
+          svg {
+            width: 10px;
+            height: 20px;
           }
         }
       }
       &6 {
-        @include mq("tablet") {
-          height: 37.5%;
-          margin-top: 0px;
-        }
+        height: 110;
         background-color: #35a8eb;
-        height: 85px;
         align-items: center;
-        margin-top: 20px;
+        margin-top: 10px;
+        box-shadow: rgba(1, 172, 238, 0.5) 0px 20px 25px -5px;
+        transition: background-color 0.5s ease-in-out;
+        &:hover {
+          background-color: $color-navy;
+          box-shadow: rgba(8, 59, 175, 0.5) 0px 20px 25px -5px;
+        }
+        @include mq("tablet") {
+          height: 114;
+          margin-top: 0px;
+          box-shadow: rgba(1, 172, 238, 0.5) 0px 20px 25px -5px;
+          transition: background-color 0.5s ease-in-out;
+          &:hover {
+            background-color: $color-navy;
+            box-shadow: rgba(8, 59, 175, 0.5) 0px 20px 25px -5px;
+          }
+        }
 
         &-alldestinations {
           border: none;
@@ -520,19 +568,29 @@
             }
           }
         }
-        #arrowright {
+        #arrowrightshow {
           @include mq("tablet") {
-            width: 30px;
-            height: 30px;
+            width: 25px;
+            height: 25px;
             position: absolute;
-            transform: translate(300px, -43px);
+            transform: translate(275px, -35px);
             color: white;
           }
-          width: 30px;
-          height: 30px;
+          width: 25px;
+          height: 25px;
           position: absolute;
-          transform: translate(250px, -39px);
+          transform: translate(275px, -35px);
           color: white;
+        }
+      }
+
+      a,
+      p {
+        font-size: 10px;
+        padding-top: 4px;
+        @include mq("tablet") {
+          font-size: 11px;
+          padding-top: 4px;
         }
       }
     }
@@ -540,15 +598,18 @@
 }
 
 .MoreDestinationsfooter {
+  margin-top: 50px;
+  margin-bottom: 30px;
   @include mq("tablet") {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 2px;
     padding: 2px;
-    padding-top: 20px;
+    margin-top: 80px;
+    margin-bottom: 50px;
   }
-  margin-top: 20px;
+
   .container {
     @include mq("tablet") {
       display: flex;
@@ -698,20 +759,28 @@
         height: 232;
         color: #fff;
 
+        transition: background-color 0.5s ease-in-out;
+        &:hover {
+          background-color: $color-navy;
+        }
+
         h1 {
-          font-size: 1.5em;
+          font-size: 1.8em;
           margin: 0;
+          a {
+            color: white;
+          }
         }
 
         img {
-          width: 262px;
+          width: 260px;
           height: 252px;
           position: absolute;
           z-index: -1;
           transform: translate(-30px, 20px);
         }
 
-        #arrowright {
+        #arrowrightmore {
           width: 25px;
           height: 25px;
           position: absolute;
@@ -724,7 +793,7 @@
         &:before {
           content: "";
           position: absolute;
-          width: 262;
+          width: 260;
           height: 252;
           background-image: linear-gradient(
             to bottom,
@@ -738,9 +807,21 @@
 
       .box4 {
         background-color: $color-blue;
+        box-shadow: rgba(1, 172, 238, 0.5) 0px 20px 25px -5px;
         margin-bottom: 20px;
+        transition: background-color 0.5s ease-in-out;
+        &:hover {
+          background-color: $color-navy;
+          box-shadow: rgba(8, 59, 175, 0.5) 0px 20px 25px -5px;
+        }
         @include mq("tablet") {
           margin-bottom: 0px;
+          box-shadow: rgba(1, 172, 238, 0.5) 0px 20px 25px -5px;
+          transition: background-color 0.5s ease-in-out;
+          &:hover {
+            background-color: $color-navy;
+            box-shadow: rgba(8, 59, 175, 0.5) 0px 20px 25px -5px;
+          }
         }
       }
 
@@ -921,15 +1002,17 @@
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;
+      justify-content: space-between;
       margin-top: 40px;
       gap: 20px;
 
       @include mq("tablet") {
         display: flex;
         justify-content: flex-start;
-        align-items: center;
+        flex-direction: row;
         margin-top: 40px;
-        gap: 100px;
+        column-gap: 100px;
+        row-gap: 0px;
       }
 
       &-item {
@@ -958,12 +1041,10 @@
   background-image: url(img/alt_back.jpg); /* Arka plan görüntüsü */
   background-position: center center; /* Görüntüyü merkeze yerleştir */
   text-align: center;
-  margin-bottom: 70px;
 
   @include mq("tablet") {
     padding-top: 100px;
     padding-bottom: 100px;
-    margin-bottom: 100px;
     background-image: url(img/alt_back.jpg); /* Arka plan görüntüsü */
     background-position: center; /* Görüntüyü merkeze yerleştir */
     background-size: 100%; /* Görüntüyü %50 oranında küçült */
@@ -1043,8 +1124,12 @@
   .container {
     height: 520px;
     text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
     @include mq("tablet") {
-      height: 400px;
+      height: 360px;
+      padding-top: 60px;
+      padding-bottom: 60px;
     }
 
     .Love-title {
@@ -1072,6 +1157,7 @@
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;
+      justify-content: space-between;
       margin-top: 40px;
       gap: 20px;
 
@@ -1080,7 +1166,8 @@
         justify-content: flex-start;
         align-items: center;
         margin-top: 40px;
-        gap: 100px;
+        column-gap: 100px;
+        row-gap: 0px;
       }
 
       &-item {
@@ -1109,7 +1196,7 @@
   color: white;
   @include mq("tablet") {
     padding-top: 60px;
-    padding-bottom: 90px;
+    padding-bottom: 60px;
     background-color: rgb(10, 83, 174);
     color: white;
   }
@@ -1122,23 +1209,25 @@
     }
 
     &-item {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      align-items: baseline;
-      gap: 1px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
       list-style-type: none; //ul simgelerini kaldırır.
       padding-inline-start: 0; //ul elementinin user agent stylesheet tarafından gelen paddingi sıfırlama
+      line-height: 30px;
+      text-align: center;
 
       @include mq("tablet") {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        text-align: center;
         list-style-type: none;
         padding-inline-start: 0;
       }
 
       a {
-        font-size: 9px;
+        font-size: 13px;
         color: white;
         @include mq("tablet") {
           font-size: 12px;
@@ -1148,53 +1237,71 @@
     }
   }
   .Ul-2 {
-    padding-bottom: 20px;
     display: flex;
-    justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 20px;
+    flex-direction: column-reverse;
+    gap: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
     @include mq("tablet") {
       padding-top: 60px;
       padding-bottom: 20px;
       display: flex;
       justify-content: flex-start;
       flex-direction: row;
-      gap: 20px;
+      gap: 25px;
     }
 
-    &-item {
-      list-style-type: none;
-      padding-inline-start: 0;
-      font-size: 9px;
-      flex: 1;
+    &-items {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      line-height: 30px;
+      gap: 30px;
+
       @include mq("tablet") {
-        list-style-type: none;
-        padding-inline-start: 0;
-        font-size: 12px;
-        flex: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        flex-grow: 1;
+        line-height: normal;
+        gap: 30px;
       }
 
-      li {
-        padding-bottom: 3px;
-        @include mq("tablet") {
-          padding-bottom: 10px;
+      .Ul-2-item {
+        padding-left: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+
+        li {
+          padding-bottom: 3px;
+          list-style-type: none;
+          @include mq("tablet") {
+            padding-bottom: 10px;
+          }
         }
-      }
 
-      a {
-        font-size: 9px;
-        color: white;
-        @include mq("tablet") {
-          font-size: 12px;
+        a {
+          font-size: 13px;
           color: white;
+          @include mq("tablet") {
+            font-size: 12px;
+            color: white;
+          }
         }
       }
     }
 
     &-store {
-      display: flex;
-      flex-direction: column;
-      flex: 2;
+      @include mq("tablet") {
+        display: flex;
+        flex-direction: column;
+        flex: 1.6;
+        padding-left: 45px;
+      }
 
       .stores {
         display: flex;
@@ -1235,10 +1342,12 @@
 
         span {
           opacity: 0.4;
-          font-size: 10px;
+          font-size: 11px;
+          line-height: 25px;
           @include mq("tablet") {
             opacity: 0.4;
             font-size: 13px;
+            line-height: 20px;
           }
         }
         a {
@@ -1248,14 +1357,12 @@
       }
     }
   }
+
   .Ul-3 {
     text-align: center;
-    padding-top: 10px;
-    @include mq("tablet") {
-      padding-top: 1px;
-    }
+
     .Copyright {
-      font-size: 10px;
+      font-size: 12px;
       opacity: 0.4;
       @include mq("tablet") {
         font-size: 12px;
